@@ -22,34 +22,43 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span2">
+        <div class="span2" style="border: 1px dashed gray;">
           <img src="http://4.bp.blogspot.com/_IU0g7TEL8dI/TSkEMIsNu_I/AAAAAAAAAgA/F3fiXLK7WMM/s1600/labychartfloor.jpg">
         </div>
-        <div class="span10">
+        <div class="span10" style="border: 1px dashed gray;">
           <div class="container-fluid">
             <div class="row-fluid">
-              <div class="span6">
-                <form class="well">
-                  <label>Username</label>
-                  <input type="text" class="span12" placeholder="Type username here">
-                  <label>Password</label>
-                  <input type="text" class="span12" placeholder="Type password here">
-                  <br>
+              <div class="span12">
+                <form class="well" action="post">
+
+                  <label>MS</label>
+                  <input type="text" class="span12" placeholder="Type in the mass here">
+
+                  <label>Sample Data</label>
+                  <textarea name="peak" cols=35 rows=6 class="span12" placeholder="type in data sample here"></textarea>
+
+                  <label>Database</label>
+                  <input type="radio" name="db" value="kegg" checked="checked"> Kegg
+                  <input type="radio" name="db" value="pubchem"> pubchem
+                  <br><br>
+
+                  <label>Device</label>
+                  <select name="device">
+                    <option value="volvo">qqq</option>
+                    <option value="saab">ltq</option>
+                    <option value="fiat">shimadzu</option>
+                  </select>
+                  
+                  <label>Model</label>
+                  <input type="radio" name="model" value="positive" checked="checked"> Positive
+                  <input type="radio" name="model" value="negtive"> Negtive
+                  <br><br>
+
                   <button class="btn btn-primary">Submit</button>
-                  <button class="btn">Submit</button>
+                  
                 </form>
               </div>
-              <div class="span6">
-                <form class="well">
-                  <label>Username</label>
-                  <input type="text" class="span12" placeholder="Type username here">
-                  <label>Password</label>
-                  <input type="text" class="span12" placeholder="Type password here">
-                  <br>
-                  <button class="btn btn-primary">Submit</button>
-                  <button class="btn">Submit</button>
-                </form>
-              </div>
+              
             </div>
           </div>
           
