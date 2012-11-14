@@ -29,10 +29,10 @@
                 <div class="title" style="text-shadow: 2px 2px 2px gray; text-align:center;">
                   <h2>Trial Mode</h2>
                 </div>
-                <form class="well" action="post">
+                <form class="well" method="post" action="../../../cgi-bin/form.py">
 
                   <label>MS</label>
-                  <input type="text" class="span12" placeholder="Type in the mass here">
+                  <input type="text" name="mass" class="span12" placeholder="Type in the mass here">
 
                   <label>Sample Data</label>
                   <textarea name="peak" cols=35 rows=6 class="span12" placeholder="type in data sample here"></textarea>
@@ -42,16 +42,15 @@
                   <input type="radio" name="db" value="pubchem"> pubchem
                   <br><br>
 
-                  <label>Device</label>
-                  <select name="device">
-                    <option value="volvo">qqq</option>
-                    <option value="saab">ltq</option>
-                    <option value="fiat">shimadzu</option>
-                  </select>
+                  <label>Device</label>                                                             
+                  <input type="radio" name="device" value="qqq" checked="checked"> qqq              
+                  <input type="radio" name="device" value="ltq"> ltq              
+                  <input type="radio" name="device" value="shimadzu"> shimadzu    
+                  <br><br>
                   
-                  <label>Model</label>
-                  <input type="radio" name="model" value="positive" checked="checked"> Positive
-                  <input type="radio" name="model" value="negtive"> Negtive
+                  <label>Mode</label>
+                  <input type="radio" name="mode" value="positive" checked="checked"> Positive
+                  <input type="radio" name="mode" value="negtive"> Negtive
                   <br><br>
 
                   <button class="btn btn-primary">Submit</button>
@@ -62,92 +61,11 @@
           </div>
         </div>
 
-        <div class="span4">
-          <div class="container-fluid">
-            <div class="row-fluid">
-              <div class="span12">
-                <div class="title" style="text-shadow: 2px 2px 2px gray; text-align:center;">
-                  <h2>Batch Mode</h2>
-                </div>
-                <form class="well" action="post">
-
-                  <label>MS</label>
-                  <input type="text" class="span12" placeholder="Type in the mass here">
-
-                  <label>Sample Data</label>
-                  <textarea name="peak" cols=35 rows=6 class="span12" placeholder="type in data sample here"></textarea>
-
-                  <label>Database</label>
-                  <input type="radio" name="db" value="kegg" checked="checked"> Kegg
-                  <input type="radio" name="db" value="pubchem"> pubchem
-                  <br><br>
-
-                  <label>Device</label>
-                  <select name="device">
-                    <option value="volvo">qqq</option>
-                    <option value="saab">ltq</option>
-                    <option value="fiat">shimadzu</option>
-                  </select>
-                  
-                  <label>Model</label>
-                  <input type="radio" name="model" value="positive" checked="checked"> Positive
-                  <input type="radio" name="model" value="negtive"> Negtive
-                  <br><br>
-
-                  <button class="btn btn-primary">Submit</button>
-                  
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="span4">
-          <div class="container-fluid">
-            <div class="row-fluid">
-              <div class="span12">
-                <div class="title" style="text-shadow: 2px 2px 2px gray; text-align:center;">
-                  <h2>Fun Mode</h2>
-                </div>
-                <form class="well" action="post">
-
-                  <label>MS</label>
-                  <input type="text" class="span12" placeholder="Type in the mass here">
-
-                  <label>Sample Data</label>
-                  <textarea name="peak" cols=35 rows=6 class="span12" placeholder="type in data sample here"></textarea>
-
-                  <label>Database</label>
-                  <input type="radio" name="db" value="kegg" checked="checked"> Kegg
-                  <input type="radio" name="db" value="pubchem"> pubchem
-                  <br><br>
-
-                  <label>Device</label>
-                  <select name="device">
-                    <option value="volvo">qqq</option>
-                    <option value="saab">ltq</option>
-                    <option value="fiat">shimadzu</option>
-                  </select>
-                  
-                  <label>Model</label>
-                  <input type="radio" name="model" value="positive" checked="checked"> Positive
-                  <input type="radio" name="model" value="negtive"> Negtive
-                  <br><br>
-
-                  <button class="btn btn-primary">Submit</button>
-                  
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       
         </div>
       </div>
     </div>    
 
     <script src="js/bootstrap.js" />
-  
   </body>
 </html>
