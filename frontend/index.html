@@ -19,29 +19,46 @@
       </div>
     </header>
 
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span4">
-          <div class="container-fluid">
-            <div class="row-fluid">
-              <div class="span12">
-                <div class="title" style="text-shadow: 2px 2px 2px gray; text-align:center;">
-                  <h2>Trial Mode</h2>
-                </div>
-                <form class="well" method="post" action="../../../cgi-bin/form.py">
-
-                  <label>MS</label>
-                  <input type="text" name="mass" class="span12" placeholder="Type in the mass here">
-
+    <div class="container">
+      <div class="span10">
+	<ul class="nav nav-tabs">
+	  <li class="active">
+	    <a href="#">Trail Mode</a>
+	  </li>
+	  <li><a href="#">Batch Mode</a></li>
+	  <li><a href="#">Fun Mode</a></li>
+	</ul>
+      </div>
+      <div class="container-fluid">
+        <div class="span10">
+          <div class="title" style="text-shadow: 2px 2px 2px grey; text-align:center;">
+          <h2>Trial Mode</h2>
+          </div>
+        </div>
+      
+        <div class="row-fluid">
+          <form class="well" method="post" action="../../../cgi-bin/form.py">
+            <div class="span5">
+              <div class="control-group">  
+                <label class="control-label" for="mass">Exact mass</label>
+                <div class="controls">
+                  <input type="text" id="mass" name="mass" class="span12" placeholder="Type in the mass here"> 
+                 </div>
+              </div>  
                   <label>Sample Data</label>
                   <textarea name="peak" cols=35 rows=6 class="span12" placeholder="type in data sample here"></textarea>
-
-                  <label>Database</label>
-                  <input type="radio" name="db" value="kegg" checked="checked"> Kegg
+                 <button class="btn btn-primary">Search</button>
+            </div>
+            <div class="span5">
+              <div class="control-group">
+                <label class="control-label" for="db">Database</label>
+                <div class="controls">
+                  <input type="radio" id="db" name="db" value="kegg" checked="checked"> Kegg
                   <input type="radio" name="db" value="pubchem"> pubchem
+                </div>
+              </div>
                   <br><br>
-
+              
                   <label>Device</label>                                                             
                   <input type="radio" name="device" value="qqq" checked="checked"> qqq              
                   <input type="radio" name="device" value="ltq"> ltq              
@@ -52,20 +69,22 @@
                   <input type="radio" name="mode" value="positive" checked="checked"> Positive
                   <input type="radio" name="mode" value="negtive"> Negtive
                   <br><br>
-
-                  <button class="btn btn-primary">Submit</button>
-                  
-                </form>
-              </div>
             </div>
-          </div>
-        </div>
-
-      
+          </form>
         </div>
       </div>
-    </div>    
-
+      <br>
+      <div class="container">
+        <table class="table table-bordered">
+	  <thead>
+            <tr> <th>ID</th> <th>name</th> <th>formula</th> </tr>
+          </thead>
+          <tbody>
+	    <tr> <td>1</td> <td>water</td> <td>H20</td> </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <script src="js/bootstrap.js" />
   </body>
 </html>
